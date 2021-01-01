@@ -21,8 +21,8 @@ function draw() {
         sum += 10 * blobs[i].r / d;
         
       }
-      set(xPix, yPix, color(xPix % 255, yPix % 255, 255));
-      //set(xPix, yPix, color(sum, 255, 255));
+      //set(xPix, yPix, color(xPix % 255, yPix % 255, 255));
+      set(xPix, yPix, color(sum % 255, 255, 255));
     }
   }
 
