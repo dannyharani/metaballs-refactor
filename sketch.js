@@ -1,35 +1,51 @@
-var blobs = []
+var blobs = [];
 
-function setup() {
-  createCanvas(400, 200);
+//Gravitational constant
+const G = 10;
+
+setup = function() {
+  createCanvas(400, 400);
   colorMode(HSB);
-  for (i = 0; i < 10; i++) blobs.push(new Blob(random(0, width), random(0, height)));
-}
+  for (var i = 0; i < 6; i++) {
+    
+    //randomly generated mass for gravitational effect: radius is a function of mass
+    var mass = random(1, 12);
 
-function draw() {
-  //background(220);
+    blobs.push(new Blob(mass));
+  }
+};
 
-  //loadPixels();
+draw = function() {
+
+  loadPixels();
   
-  for(var xPix = 0; xPix < width; xPix++) {
-    for(var yPix = 0; yPix < height; yPix++) {
+  for (var x = 0; x < width; x++) {
+    for(var y = 0; y < height; y++) {
       let sum = 0;
-      for (i = 0; i < blobs.length; i++) {
-        let xdif = xPix - blobs[i].position.x;
-        let ydif = yPix - blobs[i].position.y;
-        let d = sqrt((xdif * xdif) + (ydif * ydif));
-        sum += 10 * blobs[i].r / d;
-        
+
+      for(var i = 0; i < blobs.length; i++) {
+        var d = blobs[i].position.dist(createVector(x, y));
+        sum += 5 * blobs[i].r / d;
       }
-      //set(xPix, yPix, color(xPix % 255, yPix % 255, 255));
-      set(xPix, yPix, color(sum % 255, 255, 255));
+
+      set(x, y, color(sum, 255, 255));
+
     }
+
   }
 
   updatePixels();
-  
-  for (i = 0; i < blobs.length; i++) {
-    blobs[i].update();
-    blobs[i].checkEdges();
+
+  for(var i = 0; i < blobs.length; i++) {
+    for(var j = 0; j < blobs.length; j++) {
+
+      blobs[i].addForce(blobs[j].position, blobs[j].mass);
+      
+    }
   }
-}
+
+  for(i = 0; i < blobs.length; i++) {
+    blobs[i].update();
+  }
+
+};
