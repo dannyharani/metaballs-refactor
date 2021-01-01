@@ -2,18 +2,13 @@ var Blob = function(x, y) {
   this.position = new createVector(x, y);
   let angle = random(0, 2 * PI);
   this.velocity = new createVector(random(2, 5) * Math.cos(angle), random(2, 5) * Math.sin(angle));
-  this.acceleration = new createVector(0, 0);
+  this.acceleration = new createVector(5, 5);
   this.r = random(120, 240);
 }
 
-//method that allows the reinder accelerate
-Blob.prototype.applyForce = function(force) {
-    var f = createVector.div(force, this.mass);
-    this.acceleration.add(f);
-};
-
-Blob.prototype.update = function() {
+Blob.prototype.update = function() { 
   this.velocity.add(this.acceleration);
+  this.velocity.limit(60);
   this.position.add(this.velocity);
   this.acceleration.mult(0);
 }
