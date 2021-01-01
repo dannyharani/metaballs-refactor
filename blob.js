@@ -31,5 +31,5 @@ Blob.prototype.show = function() {
   noFill();
   stroke(0);
   strokeWeight(4);
-  ellipse(this.position.x, this.position.y, this.r * 2, this.r * 2);
+  ellipse(this.position.x / map(noise(0, 1), 0, 1, 100, width/2), this.position.y / map(noise(0, 1), 0, 1, 100, height/2), this.r * 2, this.r * 2);
 }
