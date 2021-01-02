@@ -27,6 +27,26 @@ Blob.prototype.update = function() {
     
 };
 
+//method that allows the spaceship to remain on the canvas
+Blob.prototype.checkEdges = function() {
+    //condition for if any fish crossed the right border of the canvas
+    if (this.position.x > width) {
+        this.position.x = 0;
+    } 
+    //condition for if any fish crossed the left border of the canvas
+    else if (this.position.x < 0) {
+        this.position.x = width;
+    }
+    //condition for if any fish crossed the bottom border of the canvas
+    if (this.position.y > height) {
+        this.position.y = 0;
+    } 
+     //condition for if any fish crossed the uppermost border of the canvas
+    else if (this.position.y < 0) {
+        this.position.y = height;
+    }
+};
+
 Blob.prototype.addForce = function(pos, mass) {
     if(!this.isCenter) {
         var position = createVector(this.position.x, this.position.y);
