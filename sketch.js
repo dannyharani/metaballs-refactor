@@ -1,7 +1,8 @@
 var blobs = [];
 
 //Gravitational constant
-const G = 13;
+
+var G = 7;
 
 setup = function() {
   createCanvas(400, 400);
@@ -10,13 +11,16 @@ setup = function() {
     
     //randomly generated mass for gravitational effect: radius is a function of mass
     var mass = random(1, 12);
-
     blobs.push(new Blob(mass));
   }
+
+  blobs.push(new Blob(0));
 };
 
 draw = function() {
-
+  background(255);
+  
+  
   loadPixels();
   
   for (var x = 0; x < width; x++) {
@@ -27,9 +31,9 @@ draw = function() {
         var d = blobs[i].position.dist(createVector(x, y));
         sum += 5 * blobs[i].r / d;
       }
-
+    
       set(x, y, color(sum, 255, 255));
-
+      
     }
 
   }
@@ -42,10 +46,7 @@ draw = function() {
       blobs[i].addForce(blobs[j].position, blobs[j].mass);
       
     }
-  }
-
-  for(i = 0; i < blobs.length; i++) {
     blobs[i].update();
   }
-
 };
+
