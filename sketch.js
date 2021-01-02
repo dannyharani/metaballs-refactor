@@ -5,22 +5,21 @@ var blobs = [];
 var G = 7;
 
 setup = function() {
-  createCanvas(400, 400);
+  createCanvas(500, 500);
   colorMode(HSB);
-  for (var i = 0; i < 6; i++) {
+  blobs.push(new Blob(0));
+  for (var i = 1; i <= 7; i++) {
     
     //randomly generated mass for gravitational effect: radius is a function of mass
     var mass = random(1, 12);
     blobs.push(new Blob(mass));
   }
 
-  blobs.push(new Blob(0));
+  
 };
 
 draw = function() {
-  background(255);
-  
-  
+  //background(255);  
   loadPixels();
   
   for (var x = 0; x < width; x++) {
@@ -32,7 +31,7 @@ draw = function() {
         sum += 5 * blobs[i].r / d;
       }
     
-      set(x, y, color(sum, 255, 255));
+     set(x, y, color(sum % 255, 255, 255));
       
     }
 
@@ -47,6 +46,6 @@ draw = function() {
       
     }
     blobs[i].update();
+    blobs[i].checkEdges();
   }
 };
-
