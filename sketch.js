@@ -1,7 +1,7 @@
 var blobs = [];
 
 //Gravitational constant
-const G = 10;
+const G = 13;
 
 setup = function() {
   createCanvas(400, 400);
