@@ -25,8 +25,8 @@ draw = function() {
   
   loadPixels();
   
-  for (var x = 0; x < width; x+=5) {
-    for(var y = 0; y < height; y+=5) {
+  for (var x = 0; x < width; x+=4) {
+    for(var y = 0; y < height; y+=4) {
       let sum = 0;
 
       for(var i = 0; i < blobs.length; i++) {
@@ -34,8 +34,8 @@ draw = function() {
         sum += 5 * blobs[i].r / d;
       }
       
-      for(var i = 0; i < 5; i++) {
-        for(var j = 0; j < 5; j++) {
+      for(var i = 0; i < 4; i++) {
+        for(var j = 0; j < 4; j++) {
           set(x+i, y+j, color(sum, 255, 255));
         }
       }
