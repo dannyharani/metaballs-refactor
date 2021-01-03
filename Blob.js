@@ -5,7 +5,7 @@ var Blob = function(mass) {
         this.velocity = createVector(0, 0);
         this.acceleration = createVector(0, 0);
 
-        this.r = map(mass, 1, 12, 400, 1000);
+        this.r = map(mass, 1, 12, 400, 1400);
 };
 
 Blob.prototype.update = function() {
@@ -25,7 +25,7 @@ Blob.prototype.addForce = function(pos, mass) {
 
         var dist = force.mag();
 
-        dist = constrain(dist, 10, 20);
+        dist = constrain(dist, 10, 25);
 
         force.normalize();
 
