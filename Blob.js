@@ -15,22 +15,22 @@ Blob.prototype.update = function() {
     this.velocity.limit(8);
 
     this.position.add(this.velocity);
-    
+
 };
 
 Blob.prototype.addForce = function(pos, mass) {
 
         var position = createVector(this.position.x, this.position.y);
         var force = position.sub(pos);
-        
+
         var dist = force.mag();
 
         dist = constrain(dist, 10, 20);
 
         force.normalize();
-        
+
         force.mult(G * this.mass * mass / (dist * dist));
-        
+
         this.acceleration.mult(0);
         this.acceleration.add(force.mult(-1));
 
@@ -51,4 +51,4 @@ Blob.prototype.checkEdges = function() {
         else if(this.position.y > height + 100) {
                 this.position.y = -100;
         }
-};
+}; 
