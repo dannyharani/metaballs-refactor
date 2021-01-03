@@ -14,6 +14,6 @@ Sun.prototype.orbit = function() {
 };
 
 Sun.prototype.show = function() {
-    fill('blue');
+    fill('yellow');
     ellipse(this.position.x, this.position.y, 40, 40);
 };
