@@ -2,7 +2,7 @@ var blobs = [];
 
 //Gravitational constant
 
-var G = 2;
+var G = 1.7;
 
 var sun;
 
@@ -45,13 +45,14 @@ draw = function() {
 
   updatePixels();
   
-  for(var i = 0; i < blobs.length; i++) {
+ /* for(var i = 0; i < blobs.length; i++) {
     for(var j = 0; j < blobs.length; j++) {
 
       blobs[i].addForce(blobs[j].position, blobs[j].mass);
       
       
     }
+    */
     blobs[i].addForce(sun.position, sun.mass);
     blobs[i].update();
     //blobs[i].checkEdges();
