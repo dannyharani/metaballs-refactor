@@ -8,7 +8,7 @@ Sun.prototype.orbit = function() {
     this.position.x = cos(this.itterator);
     this.position.y = sin(this.itterator);
 
-    this.position.mult(150);
+    this.position.mult(110);
     this.position.add(200, 200);
     this.itterator += 0.01;
 };
