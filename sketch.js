@@ -45,8 +45,8 @@ draw = function() {
 
   updatePixels();
   
- /* for(var i = 0; i < blobs.length; i++) {
-    for(var j = 0; j < blobs.length; j++) {
+  for(var i = 0; i < blobs.length; i++) {
+  /*  for(var j = 0; j < blobs.length; j++) {
 
       blobs[i].addForce(blobs[j].position, blobs[j].mass);
       
