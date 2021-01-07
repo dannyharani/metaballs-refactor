@@ -1,4 +1,4 @@
-## About Metaballs
+# About Metaballs
 ##### By: Hadi and Danny  
 
 If you are interested in displaying your creativity in coding, there is no better code than "metaballs".
@@ -21,4 +21,5 @@ It is also a code that promotes critical thinking through resolving a complex qu
 * How to use _object oriented programing_ efficiently
 * And **MUCH** more!
 
+> **Have fun, learn and be creative!**  
 [Run Our Code](https://dannyharani.github.io/metaballs-refactor/)
