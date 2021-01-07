@@ -26,3 +26,4 @@ It is also a code that promotes critical thinking through resolving a complex qu
 > **Have fun, learn and be creative!**  
 >[Run Our Code](https://dannyharani.github.io/metaballs-refactor/)
 
+[image](./images/example_work.png)
