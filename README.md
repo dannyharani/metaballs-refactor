@@ -21,4 +21,4 @@ It is also a code that promotes critical thinking through resolving a complex qu
 * How to use _object oriented programing_ efficiently
 * And **MUCH** more!
 
-[Run Our Code](https://dannyharani.github.io/metaballs-refactor/)a
+[Run Our Code](https://dannyharani.github.io/metaballs-refactor/)
