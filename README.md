@@ -1,5 +1,6 @@
 # About Metaballs
 ##### By: Hadi and Danny  
+>[Run Our Code](https://dannyharani.github.io/metaballs-refactor/)  
 
 If you are interested in displaying your creativity in coding, there is no better code than "metaballs".
 Metaballs shows beautiful organic shapes that can be represented in different ways with your creativity.
@@ -24,7 +25,6 @@ It is also a code that promotes critical thinking through resolving a complex qu
 * And **MUCH** more!
 
 > **Have fun, learn and be creative!**  
->[Run Our Code](https://dannyharani.github.io/metaballs-refactor/)
 
 Here is sample code!  
 ![](https://raw.githubusercontent.com/dannyharani/metaballs-refactor/main/images/example_code.png)
