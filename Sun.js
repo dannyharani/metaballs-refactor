@@ -19,7 +19,7 @@ Sun.prototype.orbit = function() {
     //Base it on center
     this.position.add(200, 200);
     //increase itterator
-    this.itterator += 0.05;
+    this.itterator += 0.1;
 };
 
 //Shows the sun object as an ellips with position values calculated above
