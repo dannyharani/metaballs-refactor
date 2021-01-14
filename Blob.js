@@ -20,9 +20,9 @@ Blob.prototype.update = function() {
 
 };
 
-//method the creates the gravitational attraction between two Blobs
+//method the creates the gravitational attraction between the sun and the Blob
 Blob.prototype.addForce = function(pos, mass) {
-  //substracting the position between 
+  //substracting the position between them
   var position = createVector(this.position.x, this.position.y);
       
   // subtracting the position defined in the constructor, by the position given in the parameter to calculate the distance between the centers 
