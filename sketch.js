@@ -18,7 +18,7 @@ setup = function() {
   for (var i = 0; i < 6; i++) {
   
     //randomly generated mass for gravitational effect: radius is a function of mass
-    var mass = random(4.3, 12);
+    var mass = random(2, 12);
     blobs.push(new Blob(mass));
   }
   
